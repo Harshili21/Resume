@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.4;
+    color: #333;
+    background: #f0f2f5; /* Lighter, subtle background */
+    padding: 20px; /* Increased padding for better spacing */
+}
+
+.resume-container {
+    max-width: 8.27in; /* A4 width */
+    margin: 0 auto;
+    background: white;
+    padding: 0.8in 0.7in; /* Adjusted padding for a cleaner look */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Softer, more pronounced shadow */
+    min-height: 11in; /* A4 height */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Increased margin for better separation */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Light border at the bottom */
+}
+
+.header-left {
+    flex: 1;
+    text-align: left;
+    padding-left: 10px; /* Added padding */
+}
+
+.header-center {
+    flex: 2;
+    text-align: center;
+}
+
+.header-right {
+    flex: 1;
+    text-align: right;
+    font-size: 11px; /* Slightly smaller for compactness */
+    line-height: 1.4;
+    padding-right: 10px; /* Added padding */
+}
+
+.cv-text {
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #555; /* Softer color */
+}
+
+.name {
+    font-size: 28px; /* Larger and more prominent */
+    font-weight: bold;
+    letter-spacing: 5px; /* Increased letter spacing */
+    text-transform: uppercase;
+    margin-bottom: 3px; /* Reduced margin */
+    color: #222; /* Darker color for emphasis */
+}
+
+.position {
+    font-size: 15px;
+    color: #666;
+    letter-spacing: 2.5px; /* Increased letter spacing */
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 1px;
+    height: 70px; /* Adjusted height */
+    background: #ddd; /* Lighter divider */
+    margin: 0 25px; /* Adjusted margin */
+}
+
+/* Section Headers */
+.section {
+    margin-bottom: 20px; /* Increased margin for better separation */
+}
+
+.section-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.section-title {
+    background: white;
+    padding: 5px 15px; /* Adjusted padding */
+    font-size: 13px; /* Slightly smaller */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    color: #333;
+    border: 1px solid #ddd; /* Light border around the title */
+    border-radius: 3px;
+}
+
+.section-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e0e0e0; /* Lighter line */
+    z-index: 0;
+}
+
+/* About Section */
+.about-content {
+    text-align: justify;
+    font-size: 12.5px; /* Slightly smaller for more content */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #444;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; /* Increased gap */
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Slightly reduced margin */
+}
+
+.skill-name {
+    font-size: 11.5px; /* Slightly smaller */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    width: 90px; /* Wider to accommodate longer names */
+    margin-right: 20px; /* Increased margin */
+    color: #333;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 7px; /* Slightly thinner */
+    background: #e9ecef; /* Lighter background for the bar */
+    border-radius: 3px; /* Rounded corners for the bar */
+    overflow: hidden; /* Ensures fill stays within bounds */
+}
+
+.skill-fill {
+    height: 100%;
+    background: #007bff; /* A professional blue for the fill */
+    width: 0%;
+    transition: width 1.5s ease-out; /* Smoother transition */
+    border-radius: 3px;
+}
+
+/* Experience and Education */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Increased gap for better visual separation */
+}
+
+.experience-item,
+.education-item {
+    margin-bottom: 15px; /* Reduced margin */
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee; /* Dashed line for subtle separation */
+}
+
+.experience-item:last-child,
+.education-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.job-title {
+    font-size: 13.5px; /* Slightly larger */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 3px; /* Reduced margin */
+    color: #333;
+}
+
+.job-details {
+    font-size: 11.5px; /* Slightly smaller */
+    color: #777; /* Softer color */
+    margin-bottom: 8px; /* Adjusted margin */
+}
+
+.job-description {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 6px; /* Reduced margin */
+    color: #444;
+}
+
+.accomplishments {
+    font-size: 12px;
+    color: #444;
+}
+
+.accomplishments-title {
+    font-weight: bold;
+    margin-bottom: 4px; /* Reduced margin */
+    color: #333;
+}
+
+.accomplishments ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.accomplishments li {
+    position: relative;
+    padding-left: 18px; /* Increased padding for bullet */
+    margin-bottom: 2px;
+    line-height: 1.4;
+}
+
+.accomplishments li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #007bff; /* Blue bullet point */
+    font-weight: bold;
+}
+
+/* References */
+.references-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; /* Increased gap */
+}
+
+.reference-item {
+    font-size: 11.5px; /* Slightly smaller */
+    line-height: 1.4;
+    color: #444;
+    border: 1px solid #eee; /* Light border around each reference */
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fcfcfc; /* Very light background */
+}
+
+.reference-name {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.reference-details {
+    line-height: 1.5;
+}
+
+.reference-email {
+    text-decoration: underline;
+    color: #007bff; /* Blue for email */
+}
+
+/* Download Button */
+.download-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #007bff; /* Professional blue */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px; /* Pill shape */
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3); /* Blue shadow */
+    transition: all 0.3s ease;
+    z-index: 1000;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.download-btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.download-btn:disabled {
+    display: block; /* Ensure it stays block */
+    opacity: 0.6;          
+    cursor: not-allowed;         
+    background: #777; /* Grey when disabled */
+    box-shadow: none; /* No shadow when disabled */
+    transform: none; /* No transform when disabled */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .resume-container {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        border-bottom: none; /* Remove border in mobile */
+        padding-bottom: 0;
+    }
+
+    .header-left,
+    .header-right {
+        padding: 0; /* Remove padding */
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .name {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .position {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .skills-grid,
+    .two-column,
+    .references-grid {
+        grid-template-columns: 1fr;
+        gap: 25px; /* Adjusted gap */
+    }
+
+    .experience-item,
+    .education-item {
+        border-bottom: 1px dashed #eee; /* Keep dashed border for all items in mobile */
+    }
+
+    .download-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 13px;
+        border-radius: 25px;
+    }
+}
